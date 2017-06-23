@@ -1,0 +1,154 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<dom-module id="iron-doc-viewer-styles">
+  <template>
+    <style>
+      :host {
+        @apply --iron-doc-font-body;
+        font-family: sans-serif;
+
+        color: #212121;
+        display: block;
+
+        --iron-doc-docs: {
+          max-width: 56em;
+          padding: 5px 20px 20px 20px;
+        };
+      }
+
+      h1 {
+        @apply --iron-doc-title;
+      }
+
+      h2 {
+        @apply --iron-doc-heading;
+        padding-top: 12px;
+      }
+
+      :host > header {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 18px;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .inheritedFrom {
+        font-style: italic;
+        margin: 10px 0 0 0px;
+      }
+
+      .inheritedFrom code {
+        color: var(--iron-doc-accent-color);
+      }
+
+      iron-doc-summary, iron-doc-function, iron-doc-property {
+        padding: 12px 16px;
+      }
+
+      .deeplink {
+        color: currentcolor;
+        text-decoration: none;
+      }
+
+      .deeplink:hover {
+        color: var(--iron-doc-accent-color);
+      }
+
+      [anchor-id]:not(.scrolled) {
+        transition: background-color 0.3s linear;
+      }
+
+      [anchor-id].scrolled {
+        background-color: rgba(255, 210, 0, 0.25);
+      }
+
+      .name {
+        @apply --iron-doc-font-code;
+        font-family: monospace;
+        font-weight: bold;
+      }
+
+      code {
+        @apply --iron-doc-font-code;
+      }
+
+      #description marked-element {
+        padding-left: 16px;
+      }
+
+      [slot=markdown-html] pre {
+        @apply --iron-doc-font-body;
+      }
+
+      [slot=markdown-html] pre {
+        background-color: #f5f5f5;
+        border-radius: 3px;
+        font-size: 15px;
+        overflow-x: auto;
+        padding: 12px 24px;
+        word-wrap: break-word;
+      }
+
+      [slot=markdown-html] table {
+        background-color: #f5f5f5;
+        border-collapse: collapse;
+        margin: 12px 0;
+        width: 100%;
+      }
+
+      [slot=markdown-html] tr {
+        padding: 0 18px;
+      }
+
+      [slot=markdown-html] td,
+      [slot=markdown-html] th {
+        padding: 6px 12px;
+      }
+
+      [slot=markdown-html] td:first-child,
+      [slot=markdown-html] th:first-child {
+        padding-left: 24px;
+      }
+
+      [slot=markdown-html] td:last-child,
+      [slot=markdown-html] th:last-child {
+        padding-right: 24px;
+      }
+
+      [slot=markdown-html] td:first-child > code {
+        color: black;
+        font-weight: bold;
+      }
+
+      [slot=markdown-html] code {
+        @apply --iron-doc-font-code;
+        background-color: #f5f5f5;
+        padding: 0 5px;
+        border-radius: 3px;
+      }
+
+      [slot=markdown-html] p {
+        padding: 0;
+      }
+
+      [slot=markdown-html] a {
+        @apply --iron-doc-font-body;
+        background: none;
+        color: #536dfe;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    </style>
+  </template>
+</dom-module>
